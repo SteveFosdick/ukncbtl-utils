@@ -13,6 +13,10 @@ UKNCBTL. If not, see <http://www.gnu.org/licenses/>. */
 
 #include "zlib/zlib.h"
 
+#ifndef WIN32
+#include <string.h>
+#define sprintf_s snprintf
+#endif
 
 //////////////////////////////////////////////////////////////////////
 // SVG driver
